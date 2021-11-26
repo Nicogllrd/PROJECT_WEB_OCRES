@@ -1,0 +1,7 @@
+.Widget{
+    color: rgb(96, 190, 245);
+    border-style: double;
+    border-color: grey;
+    border-radius: 5%;
+    background-color: whitesmoke;
+}

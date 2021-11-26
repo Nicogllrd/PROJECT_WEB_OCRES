@@ -1,22 +1,15 @@
-.App {
+#title{
+  color: grey;
   text-align: center;
+  font-size: 3em;
 }
 
-.App-logo {
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(3, 30%);
+  grid-template-rows: 100% 100%;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #09d3ac;
+  grid-column-gap: 1%;
+  grid-row-gap: 4%;
+  margin-top: 2%;
 }
