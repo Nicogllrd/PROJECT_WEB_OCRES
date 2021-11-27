@@ -6,10 +6,43 @@
 
 .grid-container{
   display: grid;
-  grid-template-columns: repeat(3, 30%);
-  grid-template-rows: 100% 100%;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
   grid-column-gap: 1%;
-  grid-row-gap: 4%;
-  margin-top: 2%;
+}
+
+.grid-items{
+  border-style: double;
+  border-color: grey;
+  border-radius: 5%;
+  background-color: whitesmoke;
+}
+
+.box1{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.box2{
+  grid-column-start: 1;
+  grid-row-start: 3;
+  grid-row-end: 5;
+}
+
+.box3{
+
+}
+
+.box4{
+
+}
+
+.box5{
+  
+}
+
+.box6{
+  
 }

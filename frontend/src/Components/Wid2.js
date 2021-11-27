@@ -6,7 +6,9 @@ class Wid2 extends Component {
     post : {}
   }
 
-  componentDidMount(){
+  /*componentDidMount(){
+    //console.log(this.props.url);
+
     fetch(this.props.url)
     .then((response) => {
       return response.json()
@@ -14,6 +16,16 @@ class Wid2 extends Component {
     .then((result) => {
       this.setState({post: result})
     })
+  }*/
+
+  componentDidMount() {
+    fetch(this.props.url)
+    .then(data => data.json())
+    .then(data => this.setState({post: data}))
+  }
+  
+  componentDidUpdate() {
+    console.log("The component just updated")
   }
 
   render(){
