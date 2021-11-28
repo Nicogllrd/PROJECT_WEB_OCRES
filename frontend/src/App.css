@@ -1,5 +1,5 @@
 #title{
-  color: grey;
+  color: black;
   text-align: center;
   font-size: 3em;
 }
@@ -11,13 +11,18 @@
   grid-column-gap: 1%;
 }
 
-.grid-items{
+.grid-items
+{/*
   border-style: double;
   border-color: grey;
   border-radius: 5%;
-  background-color: whitesmoke;
+*/  background-color: white;
+  margin:10px;
+  padding: 5px;
+  padding-left: 5px;
+  box-shadow: 10px 5px 10px black;
+  border-radius: 10px;
 }
-
 .box1{
   grid-column-start: 1;
   grid-column-end: 4;
@@ -44,5 +49,10 @@
 }
 
 .box6{
+  
+}
+
+.grid-items:hover{
+  box-shadow: 10px 5px 10px white;
   
 }

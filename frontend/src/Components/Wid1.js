@@ -24,9 +24,10 @@ class Wid1 extends Component {
       if(news && news.articles) {
         return (
           <div className="Widget wrapper">
-            <h1>{news.articles[0].title}</h1>
-            <h1>{news.articles[1].title}</h1>
-            <h1>{news.articles[2].title}</h1>
+            <div className="article"><h1>{news.articles[0].title}</h1></div>
+            <div className="article"><h1>{news.articles[1].title}</h1></div>
+            <div className="article"><h1>{news.articles[2].title}</h1></div>
+            
           </div>
         )
       }else{
