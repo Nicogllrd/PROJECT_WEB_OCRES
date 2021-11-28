@@ -3,25 +3,13 @@ import './Widget.css';
 
 class Wid2 extends Component {
   state = {
-    post : {}
+    data : []
   }
-
-  /*componentDidMount(){
-    //console.log(this.props.url);
-
-    fetch(this.props.url)
-    .then((response) => {
-      return response.json()
-    })
-    .then((result) => {
-      this.setState({post: result})
-    })
-  }*/
 
   componentDidMount() {
     fetch(this.props.url)
     .then(data => data.json())
-    .then(data => this.setState({post: data}))
+    .then(data => this.setState({data}))
   }
   
   componentDidUpdate() {
@@ -29,10 +17,10 @@ class Wid2 extends Component {
   }
 
   render(){
+    console.log(this.state.data)
     return(
       <div className="Widget">
-        <h1>Notre dernier article</h1>
-        {this.state.post.title}
+          <p style={{textAlign: "center"}}>{this.state.data.formatted}</p>
       </div>
     )
   }

@@ -23,7 +23,7 @@ class Wid3 extends Component {
     }
 
     render() {
-      console.log(this.state.data);
+      //console.log(this.state.data);
       const weather = this.state.data;
       //const icon = `<img src=${API_URL_ICON}${icon}@2x.png class="weather-icon"/>`;
       if(weather && weather.main) {
