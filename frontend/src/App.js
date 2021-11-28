@@ -7,18 +7,16 @@ import './App.css';
 
 // Clé api
 // 4081444b7b90198136fefe6ed4ccf35b
-const API_KEY = "4081444b7b90198136fefe6ed4ccf35b"; 
-
+const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
 const API_KEY1 = "HGJWFG4N8AQ66ICD";
+const API_KEY2 = "6e04df26939547e2b5603480d057621b";
 // Url API
 const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 const API_URL1 = "https://www.alphavantage.co/query";
+const API_URL2 ="https://newsapi.org/v2/top-headlines";
 
 const StockSymbol = 'FB';
-
 const city = "Paris";
-
-
 
 class App extends Component {
   constructor(){
@@ -26,7 +24,7 @@ class App extends Component {
 
     let urlList = this.state = [
       {
-        url: "https://jsonplaceholder.typicode.com/todos/1",
+        url: `${API_URL2}?country=us&category=business&apiKey=${API_KEY2}`,
       },
       {
         url: "https://jsonplaceholder.typicode.com/todos/2",
@@ -51,8 +49,8 @@ class App extends Component {
       <div>
         <h2 id='title'>Hello Widget</h2>
         <div className='grid-container'>
-          <div className="box1 grid-items"><Wid2 url = {this.state[0].url} />News</div>
-          <div className="box2 grid-items"><Wid3 url = {this.state[5].url} />Meteo</div>
+          <div className="box1 grid-items"><Wid1 url = {this.state[0].url} /></div>
+          <div className="box2 grid-items"><Wid3 url = {this.state[1].url} />Meteo</div>
           <div className="box3 grid-items"><Wid2 url = {this.state[0].url} /></div>
           <div className="box4 grid-items"><Wid2 url = {this.state[0].url} /></div>
           <div className="box5 grid-items"><Wid2 url = {this.state[0].url} />Calendrier</div>

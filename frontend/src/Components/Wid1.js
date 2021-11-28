@@ -2,32 +2,37 @@ import React, { Component } from 'react';
 import './Widget.css';
 
 class Wid1 extends Component {
-  constructor(props) {
-    super(props);
-    let res = this.state = {
-      post : {}
+    state = {
+      data : []
     }
-  }
   
   componentDidMount(){
+    console.log(this.props.url);
     fetch(this.props.url)
-    .then((response) => {
-      return response.json()
-    })
-    .then((result) => {
-      this.setState({post: result})
-    })
+    .then(data => data.json())
+    .then(data => this.setState({data}))
+  }
+
+  componentDidUpdate() {
+    console.log("The component just updated")
   }
 
   render(){
-      //console.log(this);
-    return(
-      <div className="Widget">
-        <h1>Notre dernier article</h1>
-        {this.state.post.title}
-      </div>
-    )
-  }
+      const news = this.state.data;
+      console.log(news);
+      //const icon = `<img src=${API_URL_ICON}${icon}@2x.png class="weather-icon"/>`;
+      if(news && news.articles) {
+        return (
+          <div className="Widget wrapper">
+            <h1>{news.articles[0].title}</h1>
+            <h1>{news.articles[1].title}</h1>
+            <h1>{news.articles[2].title}</h1>
+          </div>
+        )
+      }else{
+        return (<div>Loading...</div>)
+      }
+    }
 }
 
 export default Wid1;

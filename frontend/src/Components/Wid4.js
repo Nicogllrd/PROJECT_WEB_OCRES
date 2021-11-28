@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Plot from 'react-plotly.js';
 import './Widget.css';
+import './news.css';
 
 class Wid4 extends Component {
       state = {
@@ -31,7 +32,6 @@ class Wid4 extends Component {
                   //console.log(key);
                 }
               }
-    
               // console.log(stockChartXValuesFunction);
               pointerToThis.setState({
                 XValues: XValuesFunction,
