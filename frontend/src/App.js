@@ -54,7 +54,7 @@ class App extends Component {
           <div className="box3 grid-items"><Wid2 url = {this.state[0].url} /></div>
           <div className="box4 grid-items"><Wid2 url = {this.state[0].url} /></div>
           <div className="box5 grid-items"><Wid2 url = {this.state[0].url} />Calendrier</div>
-          <div className="box6 grid-items"><Wid4 url = {this.state[4].url} />Bourse</div>
+          <div className="box6 grid-items"><Wid4 url = {this.state[4].url} />test</div>
         </div>
       </div>
     )
