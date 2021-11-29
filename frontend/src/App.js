@@ -19,7 +19,7 @@ const API_URL2 ="https://newsapi.org/v2/top-headlines";
 const API_URL3 = "http://api.timezonedb.com/v2.1/get-time-zone";
 
 const StockSymbol = 'googl';
-const city = "Paris";
+const city="Paris";
 
 class App extends Component {
   constructor(){
@@ -42,7 +42,7 @@ class App extends Component {
         url: `${API_URL1}?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY1}`,
       },
       {
-        url: `${API_URL}?q=paris&units=metric&appid=${API_KEY}`,
+        url: `${API_URL}?q=${city}&units=metric&appid=${API_KEY}`,
       }
     ]
   }
@@ -54,7 +54,7 @@ class App extends Component {
         <h2 id='title'>Morning Dashboard</h2>
         <div className='grid-container'>
           <div className="box1 grid-items"><Wid1 url = {this.state[0].url} /></div>
-          <div className="box2 grid-items"><Wid3 url = {this.state[1].url} />Meteo</div>
+          <div className="box2 grid-items"><Wid3 url = {this.state[5].url} /></div>
           <div className="box3 grid-items"><Wid2 url = {this.state[3].url} /></div>
           <div className="box4 grid-items"><Wid2 url = {this.state[0].url} /></div>
           <div className="box5 grid-items"><Wid2 url = {this.state[0].url} />Calendrier</div>

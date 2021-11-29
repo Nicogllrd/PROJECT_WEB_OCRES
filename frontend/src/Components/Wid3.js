@@ -3,11 +3,16 @@ import './Widget.css';
 
 const API_URL_ICON = "http://openweathermap.org/img/wn/";
 
+
+//<img src = {this.getHTMLElementFromIcon(data.weather[0].icon)} alt="icon"/>
+
+
+
 class Wid3 extends Component {
-      state = {
-          data : []
-        }
-    
+    state = {
+        data : []
+      }
+      
     componentDidMount() {
       fetch(this.props.url)
       .then(data => data.json())
@@ -18,27 +23,38 @@ class Wid3 extends Component {
       console.log("The component just updated")
     }
 
-    getHTMLElementFromIcon(icon){
-      return `<img src=${API_URL_ICON}${icon}@2x.png class="weather-icon"/>`
+    getHTMLElementFromIcon(icon){ 
+      return `${API_URL_ICON}${icon}@2x.png`;
+    }
+
+    rechercher(){
+      var city = document.getElementById('city-input').value;
+      //console.log(city);
     }
 
     render() {
       //console.log(this.state.data);
-      const weather = this.state.data;
-      //const icon = `<img src=${API_URL_ICON}${icon}@2x.png class="weather-icon"/>`;
-      if(weather && weather.main) {
+      const data = this.state.data;
+
+      if(data && data.main && data.weather) {
         return (
           <div className="Widget">
-            <h1>Température à {weather.name}</h1>
-            <p>Température {weather.main.temp}° C</p>
-            <p>Ressentie {weather.main.feels_like}° C</p>
+            <h1 style= {{textAlign: "center"}}>{data.name}</h1>
+            <div>
+              <img id="img" src={this.getHTMLElementFromIcon(data.weather[0].icon)} />
+              <h2 id="des">{data.weather[0].description}</h2>
+            </div>
+            <h3>Température: {data.main.temp}° C</h3>
+            <h3>Ressentie: {data.main.feels_like}° C</h3>
           </div>
         )
+
       }else{
         return (<div>Loading...</div>)
       }
-      
     }
+    
 }
+
 
 export default Wid3;
