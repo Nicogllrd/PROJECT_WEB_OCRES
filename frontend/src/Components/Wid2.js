@@ -17,10 +17,10 @@ class Wid2 extends Component {
   }
 
   render(){
-    console.log(this.state.data)
+    //console.log(this.state.data)
     return(
       <div className="Widget">
-          <p style={{textAlign: "center"}}>{this.state.data.formatted}</p>
+          <h3 style={{textAlign: "center"}}>{this.state.data.formatted}</h3>
       </div>
     )
   }

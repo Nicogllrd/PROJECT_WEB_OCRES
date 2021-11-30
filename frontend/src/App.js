@@ -13,7 +13,7 @@ const API_KEY2 = "6e04df26939547e2b5603480d057621b";
 const API_KEY3 = "SADVDTXKM24E";
 
 // Url API
-const API_URL = "https://api.openweathermap.org/data/2.5/weather";
+const API_URL = "https://api.openweathermap.org/data/2.5/forecast/daily";
 const API_URL1 = "https://www.alphavantage.co/query";
 const API_URL2 ="https://newsapi.org/v2/top-headlines";
 const API_URL3 = "http://api.timezonedb.com/v2.1/get-time-zone";
@@ -42,19 +42,18 @@ class App extends Component {
         url: `${API_URL1}?function=TIME_SERIES_DAILY_ADJUSTED&symbol=${StockSymbol}&outputsize=compact&apikey=${API_KEY1}`,
       },
       {
-        url: `${API_URL}?q=${city}&units=metric&appid=${API_KEY}`,
-      }
+        url: `${API_URL}?q=${city}&units=metric&cnt=3&appid=${API_KEY}`,
+      },
     ]
   }
 
   render(){
-    //console.log(`${API_URL3}?key=${API_KEY3}&format=json&by=zone&zone=America/Chicago`)
     return(
       <div>
         <h2 id='title'>Morning Dashboard</h2>
         <div className='grid-container'>
           <div className="box1 grid-items"><Wid1 url = {this.state[0].url} /></div>
-          <div className="box2 grid-items"><Wid3 url = {this.state[5].url} /></div>
+          <div className="box2 grid-items"><Wid3 url = {this.state[5].url}/></div>
           <div className="box3 grid-items"><Wid2 url = {this.state[3].url} /></div>
           <div className="box4 grid-items"><Wid2 url = {this.state[0].url} /></div>
           <div className="box5 grid-items"><Wid2 url = {this.state[0].url} />Calendrier</div>
