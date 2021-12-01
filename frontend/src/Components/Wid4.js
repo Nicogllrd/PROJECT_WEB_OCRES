@@ -67,7 +67,7 @@ class Wid4 extends Component {
                     marker: {color: 'red'},
                     }
                 ]}
-                layout={{width: 650, height: 400, scrollZoom: true}}
+                layout={{width: 450, height: 400, scrollZoom: true}}
                 />
             </div>
         </div>

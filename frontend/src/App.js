@@ -3,6 +3,9 @@ import Wid1 from './Components/Wid1';
 import Wid2 from './Components/Wid2';
 import Wid3 from './Components/Wid3';
 import Wid4 from './Components/Wid4';
+import Wid5 from './Components/Wid5';
+
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
 // Clé api
@@ -49,20 +52,58 @@ class App extends Component {
 
   render(){
     return(
-      <div>
-        <h2 id='title'>Morning Dashboard</h2>
-        <div className='grid-container'>
-          <div className="box1 grid-items"><Wid1 url = {this.state[0].url} /></div>
-          <div className="box2 grid-items"><Wid3 url = {this.state[5].url}/></div>
-          <div className="box3 grid-items"><Wid2 url = {this.state[3].url} /></div>
-          <div className="box4 grid-items"><Wid2 url = {this.state[0].url} /></div>
-          <div className="box5 grid-items"><Wid2 url = {this.state[0].url} />Calendrier</div>
-          <div className="box6 grid-items"><Wid4 url = {this.state[4].url} /></div>
+      <div class="container-fluid">
+    <div class="row" data-masonry='{"percentPosition": true }'>
+        <div class="col-12 py-3">
+            <div class="card border-primary un">
+                <div class="col-12">
+                    <Wid1 url = {this.state[0].url} />
+                </div>
+            </div>
         </div>
-      </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 py-3 ">
+            <div class="card border-primary un">
+                <div class="col-12">
+                <Wid3 url = {this.state[5].url} />
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-sm-12 col-md-6 col-lg-8 py-3">
+             <div class="card border-primary deux">
+              <div class="row">
+                <div class="col-6 py-3 ">
+                <div class="card border-primary un">
+                  <Wid5 url = {this.state[1].url} />
+                </div>
+                </div>
+                <div class="col-6 py-3">
+                <div class="card border-primary un">
+                    <Wid2 url = {this.state[3].url} />
+                </div>
+                </div>
+                <div class="col-6">
+                <div class="card border-primary un">
+                    <Wid5 url = {this.state[0].url} />
+                </div></div>
+                <div class="col-6">
+                <div class="card border-primary un">
+                    <Wid4 url = {this.state[4].url} />
+
+                </div>
+                </div>
+              </div>
+              </div>
+              </div>
+    </div>
+</div>
+      
     )
   }
 }
 
 export default App;
+
 

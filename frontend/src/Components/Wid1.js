@@ -23,12 +23,32 @@ class Wid1 extends Component {
       //const icon = `<img src=${API_URL_ICON}${icon}@2x.png class="weather-icon"/>`;
       if(news && news.articles) {
         return (
-          <div className="Widget wrapper">
-            <div className="article"><h2>{news.articles[0].title}</h2></div>
-            <div className="article"><h2>{news.articles[1].title}</h2></div>
-            <div className="article"><h2>{news.articles[2].title}</h2></div>
-            
-          </div>
+          <div class="row">
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2 border-0">
+            <div class="card-body">
+            <h2>{news.articles[0].title}</h2>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2 border-0">
+                <div class="card-body">
+                <h2>{news.articles[1].title}</h2>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2 border-0">
+            <div class="card-body">
+            <h2>{news.articles[2].title}</h2>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+</div>
         )
       }else{
         return (<div>Loading...</div>)
@@ -37,3 +57,5 @@ class Wid1 extends Component {
 }
 
 export default Wid1;
+
+

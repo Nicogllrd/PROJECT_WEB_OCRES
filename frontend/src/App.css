@@ -1,3 +1,16 @@
+body{
+  background-color: rgba(128, 128, 128, 0.678);
+}
+.font{
+  font-size: medium;
+  
+}
+
+h1
+{
+font-size: 1.25em;
+}
+
 #title{
   color: black;
   text-align: center;
@@ -55,4 +68,34 @@
 .grid-items:hover{
   box-shadow: 10px 5px 10px white;
   
+}
+
+
+.un
+{
+
+/*border-style: double;
+border-color: grey;
+border-radius: 5%;
+*/background-color: white;
+
+box-shadow: 10px s5px 10px black;
+border-radius: 10px;
+border: none;
+}
+
+.un:hover{
+  box-shadow: 10px 5px 10px white;  
+}
+
+.deux
+{
+border: none;
+background-color: transparent/*;
+margin: ($spacer * .25) !important;
+padding: ($spacer * .25) !important;
+padding-left: ($spacer * .25) !important;
+box-shadow: 10px 5px 10px black;
+/*border-radius: 10px;*/
+
 }
