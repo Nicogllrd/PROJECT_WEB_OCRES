@@ -51,7 +51,7 @@ class Wid4 extends Component {
     componentDidUpdate() {
       console.log("The component just updated")
     }
-
+    
     render() {
     return (
         <div className="Widget">

@@ -55,7 +55,7 @@ class App extends Component {
       <div class="container-fluid">
     <div class="row" data-masonry='{"percentPosition": true }'>
         <div class="col-12 py-3">
-            <div class="card border-primary un">
+            <div class="card border-primary bloc">
                 <div class="col-12">
                     <Wid1 url = {this.state[0].url} />
                 </div>
@@ -63,33 +63,35 @@ class App extends Component {
         </div>
 
         <div class="col-sm-12 col-md-6 col-lg-4 py-3 ">
-            <div class="card border-primary un">
                 <div class="col-12">
+                <div class="card border-primary bloc">
                 <Wid3 url = {this.state[5].url} />
 
-                </div>
             </div>
+        </div>
         </div>
         
         <div class="col-sm-12 col-md-6 col-lg-8 py-3">
-             <div class="card border-primary deux">
+             <div class="card border-primary carre">
               <div class="row">
-                <div class="col-6 py-3 ">
-                <div class="card border-primary un">
+                <div class="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6 ">
+                <div class="card border-primary bloc">
                   <Wid5 url = {this.state[1].url} />
                 </div>
                 </div>
-                <div class="col-6 py-3">
-                <div class="card border-primary un">
+                <div class="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6">
+                <div class="card border-primary bloc">
                     <Wid2 url = {this.state[3].url} />
                 </div>
                 </div>
-                <div class="col-6">
-                <div class="card border-primary un">
+                </div>
+                <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-6 p-y-6">
+                <div class="card border-primary bloc">
                     <Wid5 url = {this.state[0].url} />
                 </div></div>
-                <div class="col-6">
-                <div class="card border-primary un">
+                <div class="col-sm-12 col-md-12 col-lg-6 p-y-6">
+                <div class="card border-primary bloc">
                     <Wid4 url = {this.state[4].url} />
 
                 </div>

@@ -28,7 +28,7 @@ class Wid1 extends Component {
         <div class="card mdb-color lighten-2 text-center z-depth-2 border-0">
             <div class="card-body">
             <h2>{news.articles[0].title}</h2>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            {/*<a href="#" class="btn btn-primary">Go somewhere</a>*/}
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@ class Wid1 extends Component {
         <div class="card mdb-color lighten-2 text-center z-depth-2 border-0">
                 <div class="card-body">
                 <h2>{news.articles[1].title}</h2>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+               {/*} <a href="#" class="btn btn-primary">Go somewhere</a>*/}
                 </div>
             </div>
     </div>
@@ -44,7 +44,7 @@ class Wid1 extends Component {
         <div class="card mdb-color lighten-2 text-center z-depth-2 border-0">
             <div class="card-body">
             <h2>{news.articles[2].title}</h2>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+           {/*} <a href="#" class="btn btn-primary">Go somewhere</a> */}
             </div>
         </div>
     </div>
