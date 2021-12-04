@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Widget.css';
-import metro from './metro.png';
-import num from './6.png';
+import metro from './Photos/metro.png';
+import num from './Photos/6.png';
 
 class Wid5 extends Component {
       state = {
@@ -29,23 +29,23 @@ class Wid5 extends Component {
         return (
           <div>
             <div>
-              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              <img src={metro} id="metro" alt="metro"/><img src={num} id="metro" alt="num"/>
               {data.departures[0].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[0].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[0].stop_point.name.substr(0, 10)} {"-->"} {data.departures[0].display_informations.direction.substr(0, 26)}
             </div>
             <div>
-              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              <img src={metro} id="metro" alt="metro"/><img src={num} id="metro" alt="num"/>
               {data.departures[1].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[1].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[1].stop_point.name.substr(0, 10)} {"-->"} {data.departures[1].display_informations.direction.substr(0, 26)}
             </div>
             <div>
-              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              <img src={metro} id="metro" alt="metro"/><img src={num} id="metro" alt="num"/>
               {data.departures[2].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[2].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[2].stop_point.name.substr(0, 10)} {"-->"} {data.departures[2].display_informations.direction.substr(0, 26)}
             </div>
             <div>
-              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              <img src={metro} id="metro" alt="metro"/><img src={num} id="metro" alt="num"/>
               {data.departures[3].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[3].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[3].stop_point.name.substr(0, 10)} {"-->"} {data.departures[3].display_informations.direction.substr(0, 26)}
             </div>
             <div>
-              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              <img src={metro} id="metro" alt="metro"/><img src={num} id="metro" alt="num"/>
               {data.departures[4].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[4].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[4].stop_point.name.substr(0, 10)} {"-->"} {data.departures[4].display_informations.direction.substr(0, 26)}
             </div>
           </div>

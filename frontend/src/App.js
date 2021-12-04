@@ -5,7 +5,7 @@ import Wid3 from './Components/Wid3';
 import Wid4 from './Components/Wid4';
 import Wid5 from './Components/Wid5';
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // Clé api
@@ -55,52 +55,51 @@ class App extends Component {
   render(){
     return(
       <div className="container-fluid">
-    <div className="row" data-masonry='{"percentPosition": true }'>
-        <div className="col-12 py-3">
+        <div className="row" data-masonry='{"percentPosition": true }'>
+          <div className="col-12 py-3">
             <div className="card border-primary bloc">
-                <div className="col-12">
-                    <Wid1 url = {this.state[0].url} />
-                </div>
+              <div className="col-12">
+                <Wid1 url = {this.state[0].url} />
+              </div>
             </div>
-        </div>
+          </div>
 
         <div className="col-sm-12 col-md-6 col-lg-4 py-3 ">
-                <div className="col-12">
-                <div className="card border-primary bloc">
-                <Wid2 url = {this.state[3].url} /> 
-
+          <div className="col-12">
+            <div className="card border-primary bloc">
+              <Wid2 url = {this.state[3].url} />
             </div>
-        </div>
+          </div>
         </div>
         
         <div className="col-sm-12 col-md-6 col-lg-8 py-3">
-             <div className="card border-primary carre">
-              <div className="row">
-                <div className="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6 ">
+          <div className="card border-primary carre">
+            <div className="row">
+              <div className="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6 ">
                 <div className="card border-primary bloc">
                   <Wid5 url = {this.state[1].url} />
                 </div>
-                </div>
-                <div className="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6">
+              </div>
+              <div className="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6">
                 <div className="card border-primary bloc">
-                    <Wid2 url = {this.state[3].url} />
-                </div>
-                </div>
-                </div>
-                <div className="row">
-                <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
-                <div className="card border-primary bloc">
-                    <Wid5 url = {this.state[0].url} />
-                </div></div>
-                <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
-                <div className="card border-primary bloc">
-                    <Wid4 url = {this.state[4].url} />
-
-                </div>
+                  <Wid2 url = {this.state[3].url} />
                 </div>
               </div>
+            </div>
+            <div className="row">
+              <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
+                <div className="card border-primary bloc">
+                  <Wid5 url = {this.state[0].url} />
+                </div>
               </div>
-              </div>
+              <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
+                <div className="card border-primary bloc">
+                  <Wid4 url = {this.state[4].url} />
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 </div>
       
