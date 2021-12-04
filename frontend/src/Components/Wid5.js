@@ -19,8 +19,19 @@ class Wid5 extends Component {
     }
 
     render() {
-    return (
-        <div>Hello</div>        )
+      console.log(this.state.data)
+      const data = this.state.data;
+      const dataList = this.state.data.context;
+
+      if(data && dataList) {
+        return (
+          <div>
+            <p>{dataList.timezone}</p>
+          </div>
+        )
+      }else{
+        return (<div>Loading...</div>)
+      }
     }
 }
 

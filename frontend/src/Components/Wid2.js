@@ -3,15 +3,20 @@ import './Widget.css';
 
 class Wid2 extends Component {
   state = {
-    data : []
+    data : [],
+    date: new Date()
   }
 
   componentDidMount() {
+    this.fetch(); 
+  }
+
+  fetch(){
     fetch(this.props.url)
     .then(data => data.json())
     .then(data => this.setState({data}))
-  }
-  
+  } 
+
   componentDidUpdate() {
     console.log("The component just updated")
   }

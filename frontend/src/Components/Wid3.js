@@ -31,9 +31,9 @@ class Wid3 extends Component {
       const data = this.state.data;
       const dataCity = this.state.data.city;
       const dataList = this.state.data.list;
-      console.log(data);
-      console.log(dataCity);
-      console.log(dataList);
+      //console.log(data);
+      //console.log(dataCity);
+      //console.log(dataList);
 
       if(data && dataCity &&dataList) {
         return(
