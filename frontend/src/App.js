@@ -69,8 +69,8 @@ class App extends Component {
                 <div className="col-12">
                 <Wid3 url = {this.state[4].url} />
 
-                </div>
             </div>
+        </div>
         </div>
         
         <div className="col-sm-12 col-md-6 col-lg-8 py-3">

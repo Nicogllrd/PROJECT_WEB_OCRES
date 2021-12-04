@@ -42,8 +42,8 @@ class Wid3 extends Component {
             <div>
               <img id="img" src={this.getHTMLElementFromIcon(dataList[0].weather[0].icon)} />
               <h2 id="des">{dataList[0].weather[0].description}</h2>
-              <h3>Température: {dataList[0].temp.day}° C</h3>
-              <h3>Ressentie: {dataList[0].feels_like.day}° C</h3>
+              <h3><small> Température: {dataList[0].temp.day}° C</small></h3>
+              <h3><small>Ressentie: {dataList[0].feels_like.day}° C</small></h3>
             </div>
             <div id="small-icon">
               <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[1].weather[0].icon)} /><p>{'\n'} Demain</p></div>

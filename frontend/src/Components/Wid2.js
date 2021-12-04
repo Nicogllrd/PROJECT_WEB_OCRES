@@ -25,7 +25,7 @@ class Wid2 extends Component {
     //console.log(this.state.data)
     return(
       <div className="Widget">
-          <h3 style={{textAlign: "center"}}>{this.state.data.formatted}</h3>
+          <h4 style={{textAlign: "center"}}>{this.state.data.formatted}</h4>
       </div>
     )
   }
