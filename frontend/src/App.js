@@ -14,12 +14,14 @@ const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
 const API_KEY1 = "HGJWFG4N8AQ66ICD";
 const API_KEY2 = "6e04df26939547e2b5603480d057621b";
 const API_KEY3 = "SADVDTXKM24E";
+const API_KEY4 = "3b036afe-0110-4202-b9ed-99718476c2e0";
 
 // Url API
 const API_URL = "https://api.openweathermap.org/data/2.5/forecast/daily";
 const API_URL1 = "https://www.alphavantage.co/query";
 const API_URL2 ="https://newsapi.org/v2/top-headlines";
 const API_URL3 = "http://api.timezonedb.com/v2.1/get-time-zone";
+const API_URL4 = "https://api.navitia.io/v1/coverage/sandbox/lines/line%3ARAT%3AM6/stop_points/stop_point%3ARAT%3ASP%3ABIRHA1/departures";
 
 const StockSymbol = 'googl';
 const city="Paris";
@@ -33,7 +35,7 @@ class App extends Component {
         url: `${API_URL2}?country=fr&category=business&apiKey=${API_KEY2}`,
       },
       {
-        url: "https://jsonplaceholder.typicode.com/todos/2",
+        url: `${API_URL4}?key=${API_KEY4}`,
       },
       {
         url: "https://jsonplaceholder.typicode.com/todos/3",
@@ -52,44 +54,44 @@ class App extends Component {
 
   render(){
     return(
-      <div class="container-fluid">
-    <div class="row" data-masonry='{"percentPosition": true }'>
-        <div class="col-12 py-3">
-            <div class="card border-primary un">
-                <div class="col-12">
+      <div className="container-fluid">
+    <div className="row" data-masonry='{"percentPosition": true }'>
+        <div className="col-12 py-3">
+            <div className="card border-primary un">
+                <div className="col-12">
                     <Wid1 url = {this.state[0].url} />
                 </div>
             </div>
         </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-4 py-3 ">
-            <div class="card border-primary un">
-                <div class="col-12">
-                <Wid3 url = {this.state[5].url} />
+        <div className="col-sm-12 col-md-6 col-lg-4 py-3 ">
+            <div className="card border-primary un">
+                <div className="col-12">
+                <Wid3 url = {this.state[4].url} />
 
                 </div>
             </div>
         </div>
         
-        <div class="col-sm-12 col-md-6 col-lg-8 py-3">
-             <div class="card border-primary deux">
-              <div class="row">
-                <div class="col-6 py-3 ">
-                <div class="card border-primary un">
+        <div className="col-sm-12 col-md-6 col-lg-8 py-3">
+             <div className="card border-primary deux">
+              <div className="row">
+                <div className="col-6 py-3 ">
+                <div className="card border-primary un">
                   <Wid5 url = {this.state[1].url} />
                 </div>
                 </div>
-                <div class="col-6 py-3">
-                <div class="card border-primary un">
+                <div className="col-6 py-3">
+                <div className="card border-primary un">
                     <Wid2 url = {this.state[3].url} />
                 </div>
                 </div>
-                <div class="col-6">
-                <div class="card border-primary un">
+                <div className="col-6">
+                <div className="card border-primary un">
                     <Wid5 url = {this.state[0].url} />
                 </div></div>
-                <div class="col-6">
-                <div class="card border-primary un">
+                <div className="col-6">
+                <div className="card border-primary un">
                     <Wid4 url = {this.state[4].url} />
 
                 </div>
