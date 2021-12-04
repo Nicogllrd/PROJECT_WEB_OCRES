@@ -8,6 +8,8 @@ import Wid5 from './Components/Wid5';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css';
 
+
+
 // Clé api
 // 4081444b7b90198136fefe6ed4ccf35b
 const API_KEY = "4081444b7b90198136fefe6ed4ccf35b";
