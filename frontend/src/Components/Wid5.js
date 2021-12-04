@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Plot from 'react-plotly.js';
 import './Widget.css';
-import './news.css';
+import metro from './metro.png';
+import num from './6.png';
 
 class Wid5 extends Component {
       state = {
@@ -19,14 +19,35 @@ class Wid5 extends Component {
     }
 
     render() {
-      console.log(this.state.data)
       const data = this.state.data;
-      const dataList = this.state.data.context;
+      const dataList = data.context;
+
+      console.log(data)
+      console.log(this.props.url)
 
       if(data && dataList) {
         return (
           <div>
-            <p>{dataList.timezone}</p>
+            <div>
+              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              {data.departures[0].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[0].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[0].stop_point.name.substr(0, 10)} {"-->"} {data.departures[0].display_informations.direction.substr(0, 26)}
+            </div>
+            <div>
+              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              {data.departures[1].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[1].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[1].stop_point.name.substr(0, 10)} {"-->"} {data.departures[1].display_informations.direction.substr(0, 26)}
+            </div>
+            <div>
+              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              {data.departures[2].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[2].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[2].stop_point.name.substr(0, 10)} {"-->"} {data.departures[2].display_informations.direction.substr(0, 26)}
+            </div>
+            <div>
+              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              {data.departures[3].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[3].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[3].stop_point.name.substr(0, 10)} {"-->"} {data.departures[3].display_informations.direction.substr(0, 26)}
+            </div>
+            <div>
+              <img src={metro} id="metro"/><img src={num} id="metro"/>
+              {data.departures[4].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[4].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[4].stop_point.name.substr(0, 10)} {"-->"} {data.departures[4].display_informations.direction.substr(0, 26)}
+            </div>
           </div>
         )
       }else{

@@ -40,29 +40,17 @@ class Wid3 extends Component {
           <div className="Widget">
             <h2 style= {{textAlign: "center"}}>{dataCity.name}</h2>
             <div>
-              <img id="img" src={this.getHTMLElementFromIcon(dataList[0].weather[0].icon)} />
+              <img id="img" src={this.getHTMLElementFromIcon(dataList[0].weather[0].icon)} alt="icon meteo"/>
               <h2 id="des">{dataList[0].weather[0].description}</h2>
               <h3><small> Température: {dataList[0].temp.day}° C</small></h3>
               <h3><small>Ressentie: {dataList[0].feels_like.day}° C</small></h3>
             </div>
             <div id="small-icon">
-              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[1].weather[0].icon)} /><p>{'\n'} Demain</p></div>
-              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[2].weather[0].icon)} /><p>{'\n'} Après-demain</p></div>
+              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[1].weather[0].icon)} alt="icon meteo"/><p>{'\n'} Demain</p></div>
+              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[2].weather[0].icon)} alt="icon meteo"/><p>{'\n'} Après-demain</p></div>
             </div>
           </div>
         )
-        /*return (
-          <div className="Widget">
-            <h1 style= {{textAlign: "center"}}>{data.name}</h1>
-            <div>
-              <img id="img" src={this.getHTMLElementFromIcon(data.weather[0].icon)} />
-              <h2 id="des">{data.weather[0].description}</h2>
-            </div>
-            <h3>Température: {data.main.temp}° C</h3>
-            <h3>Ressentie: {data.main.feels_like}° C</h3>
-          </div>
-        )*/
-
       }else{
         return (<div>Loading...</div>)
       }

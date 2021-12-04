@@ -67,7 +67,7 @@ class App extends Component {
         <div className="col-sm-12 col-md-6 col-lg-4 py-3 ">
                 <div className="col-12">
                 <div className="card border-primary bloc">
-                <Wid2 url = {this.state[3].url} />
+                <Wid2 url = {this.state[3].url} /> 
 
             </div>
         </div>
