@@ -22,8 +22,8 @@ class Wid5 extends Component {
       const data = this.state.data;
       const dataList = data.context;
 
-      console.log(data)
-      console.log(this.props.url)
+      //console.log(data)
+      //console.log(this.props.url)
 
       if(data && dataList) {
         return (

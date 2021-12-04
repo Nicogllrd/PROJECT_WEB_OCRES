@@ -4,11 +4,12 @@ import Wid2 from './Components/Wid2';
 import Wid3 from './Components/Wid3';
 import Wid4 from './Components/Wid4';
 import Wid5 from './Components/Wid5';
+import Appback from '../../backend/app';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -62,7 +63,7 @@ class App extends Component {
   render(){
     return(
       <div className="container-fluid">
-        <Router><div><Link to="backend/routes/index.js">Admin</Link></div></Router>
+        <h1><Router><Routes><Route exact path='../../backend/app' Component={Appback}></Route></Routes></Router></h1>
         <div className="row" data-masonry='{"percentPosition": true }'>
           <div className="col-12 py-3">
             <div className="card border-primary bloc">
