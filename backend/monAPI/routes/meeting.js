@@ -2,49 +2,50 @@ var express = require('express');
 var router = express.Router();
 const _ = require('lodash');
 
-let meetings = [
+  const meetings= [
     {
-        id: "1",
-        date:"05/12/2021"
+      id:"1",
+      date: "06/12/2021",
+      lieu: 'ECE'
     },
     {
-        id: "2",
-        date:"06/12/2021"
+      id:"2",
+      date: "07/12/2021",
+      lieu: 'ECE'
     },
     {
-        id: "3",
-        date:"07/12/2021"
+      id:"3",
+      date: "08/12/2021",
+      lieu: 'ECE'
     },
     {
-        id: "4",
-        date:"08/12/2021"
+      id:"4",
+      date: "09/12/2021",
+      lieu: 'ECE'
     },
     {
-        id: "5",
-        date:"09/12/2021"
-    },
-    {
-        id: "6",
-        date:"10/12/2021"
+      id:"5",
+      date: "10/12/2021",
+      lieu: 'ECE'
     }
-];
+  ];
 
     //GET meeting listing.
     router.get('/', (req, res) => {
-        // Get List of meeting and return JSON
-        res.status(200).json({ meetings });
+      // Get List of meeting and return JSON
+      res.status(200).json({ meetings });
     });
 
     /* GET one meeting. */
     router.get('/:id', (req, res) => {
-        const { id } = req.params;
-        // Find meeting in DB
-        let meeting = _.find(meetings, ["id", id]);
-        // Return meeting
-        res.status(200).json({
-          meeting
-        });
+      const { id } = req.params;
+      // Find meeting in DB
+      let meeting = _.find(meetings, ["id", id]);
+      // Return meeting
+      res.status(200).json({
+        meeting
       });
+    });
 
       /* PUT new meeting. */
     router.put('/', (req, res) => {
@@ -55,10 +56,10 @@ let meetings = [
     // Insert it in array (normaly with connect the data with the database)
     meetings.push({ meeting, id });
     // Return message
-    res.json({
-      message: `Just added ${id}`,
-      meeting: { meeting, id }
-    });
+      res.json({
+        message: `Just added ${id}`,
+        meeting: { meeting, id }
+      });
     });
 
      /* DELETE meeting. */
@@ -70,9 +71,9 @@ let meetings = [
     _.remove(meetings, ["id", id]);
   
     // Return message
-    res.json({
-      message: `Just removed ${id}`
-    });
+      res.json({
+        message: `Just removed ${id}`
+      });
     });
 
      /* UPDATE meeting. */
@@ -84,12 +85,12 @@ let meetings = [
     // Find in DB
     const meetingToUpdate = _.find(meeting, ["id", id]);
     // Update data with new data (js is by address)
-    meetingToUpdate.movie = meeting;
+    meetingToUpdate.meeting = meeting;
   
     // Return message
-    res.json({
-      message: `Just updated ${id} with ${meeting}`
-    });
+      res.json({
+        message: `Just updated ${id} with ${meeting}`
+      });
     });
 
     module.exports = router;
