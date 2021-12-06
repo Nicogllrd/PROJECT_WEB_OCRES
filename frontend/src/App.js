@@ -4,11 +4,12 @@ import Wid2 from './Components/Wid2';
 import Wid3 from './Components/Wid3';
 import Wid4 from './Components/Wid4';
 import Wid5 from './Components/Wid5';
+import Wid6 from './Components/Wid6';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Switch,
+  Routes,
   Route,
   Link
 } from "react-router-dom";
@@ -56,13 +57,15 @@ class App extends Component {
       {
         url: `${API_URL}?q=${city}&units=metric&cnt=3&appid=${API_KEY}`,
       },
+      {
+        url: "http://localhost:3000/meeting",
+      }
     ]
   }
 
   render(){
     return(
       <div className="container-fluid">
-        <Router><div><Link to="backend/routes/index.js">Admin</Link></div></Router>
         <div className="row" data-masonry='{"percentPosition": true }'>
           <div className="col-12 py-3">
             <div className="card border-primary bloc">
@@ -75,7 +78,7 @@ class App extends Component {
           <div className="col-sm-12 col-md-6 col-lg-4 py-3 ">
             <div className="col-12">
               <div className="card border-primary bloc">
-                <Wid3 url = {this.state[5].url} />      {/*Widget Meteo à modifier*/}
+                <Wid3 url = {this.state[5].url} />
               </div>
             </div>
           </div>
@@ -97,6 +100,7 @@ class App extends Component {
               <div className="row">
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
                   <div className="card border-primary bloc">
+                    <Wid6 url={this.state[6].url} />
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">

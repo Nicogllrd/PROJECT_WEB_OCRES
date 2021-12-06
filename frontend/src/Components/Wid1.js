@@ -1,8 +1,6 @@
 import React, { Component, Carousel } from 'react';
 import './Widget.css';
 
-
-
 class Wid1 extends Component {
     state = {
       data : []
@@ -19,8 +17,6 @@ class Wid1 extends Component {
     console.log("The component just updated")
   }
 
-
-   
   render(){
     const news=this.state.data;
     if(news && news.articles){
