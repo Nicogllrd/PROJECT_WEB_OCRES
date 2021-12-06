@@ -38,16 +38,16 @@ class Wid3 extends Component {
       if(data && dataCity &&dataList) {
         return(
           <div className="Widget">
-            <h2 style= {{textAlign: "center"}}>{dataCity.name}</h2>
+            <h2 style= {{textAlign: "center"}}>{dataCity.name}</h2>       {/* Nom de la ville*/}
             <div>
-              <img id="img" src={this.getHTMLElementFromIcon(dataList[0].weather[0].icon)} alt="icon meteo"/>
-              <h2 id="des">{dataList[0].weather[0].description}</h2>
-              <h3><small> Température: {dataList[0].temp.day}° C</small></h3>
-              <h3><small>Ressentie: {dataList[0].feels_like.day}° C</small></h3>
+              <img id="img" src={this.getHTMLElementFromIcon(dataList[0].weather[0].icon)} alt="icon meteo"/> {/*Icone meteo*/}
+              <h2 id="des">{dataList[0].weather[0].description}</h2>          {/*Description meteo*/}
+              <h3><small> Température: {dataList[0].temp.day}° C</small></h3>     {/*Temperature */}
+              <h3><small>Ressentie: {dataList[0].feels_like.day}° C</small></h3>      {/*Ressenti */}
             </div>
             <div id="small-icon">
-              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[1].weather[0].icon)} alt="icon meteo"/><p>{'\n'} Demain</p></div>
-              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[2].weather[0].icon)} alt="icon meteo"/><p>{'\n'} Après-demain</p></div>
+              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[1].weather[0].icon)} alt="icon meteo"/><p>{'\n'} Demain</p></div>      {/* meteo de demain*/}
+              <div id="sicon"><img src={this.getHTMLElementFromIcon(dataList[2].weather[0].icon)} alt="icon meteo"/><p>{'\n'} Après-demain</p></div>      {/* meteo d'après-demain*/}
             </div>
           </div>
         )

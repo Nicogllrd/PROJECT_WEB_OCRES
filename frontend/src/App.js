@@ -30,8 +30,8 @@ const API_URL2 ="https://newsapi.org/v2/top-headlines";
 const API_URL3 = "http://api.timezonedb.com/v2.1/get-time-zone";
 const API_URL4 = "https://api.navitia.io/v1/coverage/sandbox/lines/line%3ARAT%3AM6/stop_points/stop_point%3ARAT%3ASP%3ABIRHA1/departures";
 
-const StockSymbol = 'googl';
-const city="Paris";
+const StockSymbol = 'googl';    //Entreprise affichée sur le widget de finance
+const city="Paris";             //Ville de l'utilisateur
 
 class App extends Component {
   constructor(){
@@ -67,7 +67,7 @@ class App extends Component {
           <div className="col-12 py-3">
             <div className="card border-primary bloc">
               <div className="col-12">
-                <Wid1 url = {this.state[0].url} />
+                <Wid1 url = {this.state[0].url} />      {/*Widget News*/}
               </div>
             </div>
           </div>
@@ -75,7 +75,7 @@ class App extends Component {
           <div className="col-sm-12 col-md-6 col-lg-4 py-3 ">
             <div className="col-12">
               <div className="card border-primary bloc">
-                <Wid2 url = {this.state[3].url} />
+                <Wid3 url = {this.state[5].url} />      {/*Widget Meteo à modifier*/}
               </div>
             </div>
           </div>
@@ -85,12 +85,12 @@ class App extends Component {
               <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6 ">
                   <div className="card border-primary bloc">
-                    <Wid5 url = {this.state[1].url} />
+                    <Wid5 url = {this.state[1].url} />        {/*Widget Metro*/}
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-6 p-top-0 p-bottom-6">
                   <div className="card border-primary bloc">
-                    <Wid2 url = {this.state[3].url} />
+                    <Wid2 url = {this.state[3].url} />        {/*Widget heure*/}
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ class App extends Component {
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
                   <div className="card border-primary bloc">
-                    <Wid4 url = {this.state[4].url} />
+                    <Wid4 url = {this.state[4].url} />        {/*Widget finance*/}
                   </div>
                 </div>
               </div>
