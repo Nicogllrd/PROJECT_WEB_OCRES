@@ -89,7 +89,7 @@ class App extends Component {
               <div className="row">
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
                   <div className="card border-primary bloc">
-                    <Wid6 />                                {/*Widget backend*/} {/*On passe en props notre url récupérée du tableau ci-dessus*/}
+                    <Wid6 />                              {/*Widget backend*/} {/*On passe en props notre url récupérée du tableau ci-dessus*/}
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
