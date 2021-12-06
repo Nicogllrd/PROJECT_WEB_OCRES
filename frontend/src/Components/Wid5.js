@@ -9,9 +9,9 @@ class Wid5 extends Component {
             }
 
     componentDidMount() {
-        fetch(this.props.url)
-        .then(data => data.json())
-        .then(data => this.setState({data}))
+        fetch(this.props.url)                      //On récupère les données de l'Url passée en props
+        .then(data => data.json())                 //On les passe en format JSON
+        .then(data => this.setState({data}))       //On les intègre dans nos state
     }
 
     componentDidUpdate() {
@@ -22,13 +22,10 @@ class Wid5 extends Component {
       const data = this.state.data;
       const dataList = data.context;
 
-      //console.log(data)
-      //console.log(this.props.url)
-
       if(data && dataList) {
         return (
           <div>
-            <div>
+            <div>                 {/*On récupère l'icone métro, le numéro, l'arret, la destination et l'heure de passage*/}
               <img src={metro} id="metro" alt="metro"/><img src={num} id="metro" alt="num"/>
               {data.departures[0].stop_date_time.arrival_date_time.substr(9, 2)}:{data.departures[0].stop_date_time.arrival_date_time.substr(11, 2)}-{data.departures[0].stop_point.name.substr(0, 10)} {"-->"} {data.departures[0].display_informations.direction.substr(0, 26)}
             </div>

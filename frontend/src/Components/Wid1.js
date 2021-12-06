@@ -8,9 +8,9 @@ class Wid1 extends Component {
   
   componentDidMount(){
     //console.log(this.props.url);
-    fetch(this.props.url)
-    .then(data => data.json())
-    .then(data => this.setState({data}))
+    fetch(this.props.url)                           //On récupère les données de l'Url passée en props
+    .then(data => data.json())                      //On les passe en format JSON
+    .then(data => this.setState({data}))            //On les intègre dans nos state
   }
 
   componentDidUpdate() {
@@ -18,8 +18,8 @@ class Wid1 extends Component {
   }
 
   render(){
-    const news=this.state.data;
-    if(news && news.articles){
+    const news=this.state.data;                               {/*On fixe nos données dans une constante news*/}
+    if(news && news.articles){                                {/*On vérifie qu'on aie nos données souhaitées*/}
     return (
       <div className="row">
             
@@ -27,7 +27,6 @@ class Wid1 extends Component {
             <div className="card mdb-color lighten-2 text-center z-depth-2 border-0">
               <div className="card-body">
                 <h2>{news.articles[0].title}</h2>             {/*News 1*/}
-                {/*<a href="#" class="btn btn-primary">Go somewhere</a>*/}
               </div>
               
             </div>
@@ -37,7 +36,6 @@ class Wid1 extends Component {
             <div className="card mdb-color lighten-2 text-center z-depth-2 border-0">
               <div className="card-body">
                 <h2>{news.articles[1].title}</h2>               {/*News 2*/}
-                {/*} <a href="#" class="btn btn-primary">Go somewhere</a>*/}
               </div>
             </div>
           </div>
@@ -46,14 +44,13 @@ class Wid1 extends Component {
             <div className="card mdb-color lighten-2 text-center z-depth-2 border-0">
               <div className=" card-body">
                 <h2>{news.articles[2].title}</h2>                 {/*News 3*/}
-                {/*} <a href="#" class="btn btn-primary">Go somewhere</a> */}
               </div>
             </div>
           </div>
           </div>
     )
   }
-  else{
+  else{                                                           {/*Si nos données ne sont pas présentes*/}
     return(<div>Loading...</div>)
   }
 }

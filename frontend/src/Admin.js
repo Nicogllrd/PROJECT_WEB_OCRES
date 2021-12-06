@@ -6,6 +6,7 @@ function Admin (props) {
     return(
       <div>
         <Link to="/">App</Link>
+        Interface pour modifier notre widget meeting
       </div>
     )
   }

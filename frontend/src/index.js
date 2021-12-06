@@ -2,15 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
 import Admin from './Admin';
-import {
-    BrowserRouter as Router,
-    Routes,
-    Route,
-    Link
-  } from "react-router-dom";
-  
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
@@ -18,12 +11,12 @@ ReactDOM.render(
     <Router>
         <div className="body">
             <Routes>
-                <Route path='/' element={<App />} />
+                <Route path='/' element={<App />} />            {/*Création de notre premiere route vers l'app*/}
             </Routes>
         </div>
         <div id="admin">
             <Routes>
-                <Route path="/Admin" element={<Admin />} />
+                <Route path="/Admin" element={<Admin />} />     {/*Création de notre deuxieme route vers l'admin.js*/}
             </Routes>
         </div>
     </Router>

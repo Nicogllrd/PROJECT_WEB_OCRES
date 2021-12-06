@@ -7,9 +7,9 @@ class Wid6 extends Component {
     }
   
   componentDidMount(){
-    //console.log(this.props.url);
+    console.log(this.props.url);
     fetch(this.props.url)
-    .then(data => data.json())
+    //.then(data => data.json())
     .then(data => this.setState({data}))
   }
 
@@ -20,7 +20,7 @@ class Wid6 extends Component {
     render(){
         return(
             <div>
-                Hello
+                Données tirées de notre API backend
             </div>
         )
     }
