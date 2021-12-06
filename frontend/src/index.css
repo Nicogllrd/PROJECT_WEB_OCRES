@@ -1,3 +1,8 @@
 body{
   background-color: rgba(128, 128, 128, 0.678);
 }
+
+#admin{
+  color: black;
+  text-align: center;
+}

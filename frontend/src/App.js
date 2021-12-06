@@ -46,7 +46,7 @@ class App extends Component {
         url: `${API_URL4}?key=${API_KEY4}`,
       },
       {
-        url: "https://jsonplaceholder.typicode.com/todos/3",
+        url: "/meeting",
       },
       {
         url: `${API_URL3}?key=${API_KEY3}&format=json&by=zone&zone=Europe/Paris`,
@@ -100,7 +100,7 @@ class App extends Component {
               <div className="row">
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
                   <div className="card border-primary bloc">
-                    <Wid6 url={this.state[6].url} />
+                    <Wid6 />
                   </div>
                 </div>
                 <div className="col-sm-12 col-md-12 col-lg-6 p-y-6">
@@ -111,6 +111,9 @@ class App extends Component {
               </div>
             </div>
           </div>
+        </div>
+        <div className="row">
+          <Link to="/Admin">Admin</Link>
         </div>
       </div>
     )

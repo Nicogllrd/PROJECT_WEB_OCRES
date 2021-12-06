@@ -3,14 +3,30 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
+import Admin from './Admin';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
+  
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
     <React.StrictMode>
-    <div className="body">
-        <App />
-    </div>
-
+    <Router>
+        <div className="body">
+            <Routes>
+                <Route path='/' element={<App />} />
+            </Routes>
+        </div>
+        <div id="admin">
+            <Routes>
+                <Route path="/Admin" element={<Admin />} />
+            </Routes>
+        </div>
+    </Router>
 
     </React.StrictMode>, 
     document.getElementById('root')
